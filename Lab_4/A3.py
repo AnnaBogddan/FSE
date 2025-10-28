@@ -13,7 +13,6 @@ def analyze_packets():
         break
 
     total_packets = len(packets)
-    packets.count("0")
 
     lost_packets = packets.count('0')
     
