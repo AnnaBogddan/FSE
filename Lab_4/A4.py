@@ -1,6 +1,4 @@
 import re
-
-
 def isValidNumber(string):
     return string.isdigit() and len(string) in [13, 15, 16]
 
@@ -20,7 +18,6 @@ def getCheckSum(string):
 
 
 def getCardType(string):
-    """Определяет тип банковской карты"""
     if (len(string) == 13 or len(string) == 16) and string.startswith("4"):
         return "Visa"
     if len(string) == 15 and (string.startswith("34") or string.startswith("37")):

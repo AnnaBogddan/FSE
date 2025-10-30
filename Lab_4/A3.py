@@ -12,14 +12,10 @@ def analyze_packets():
             continue
         break
 
-    # Общее количество пакетов
     total_packets = len(packets)
-    packets.count("0")
 
-    # Количество потерянных пакетов
     lost_packets = packets.count('0')
 
-    # Длина самой длинной последовательности потерянных пакетов
     max_lost_streak = 0
     current_streak = 0
 
@@ -30,7 +26,6 @@ def analyze_packets():
         else:
             current_streak = 0
 
-    # Процент потерь
     loss_percentage = (lost_packets / total_packets) * 100
 
     if loss_percentage <= 1:
@@ -44,7 +39,6 @@ def analyze_packets():
     else:
         quality = "Критическое состояние сети"
 
-    # Вывод результатов10001000010
     print("\nВывод:")
     print(f"Общее количество пакетов: {total_packets}")
     print(f"Количество потерянных пакетов: {lost_packets}")
@@ -53,6 +47,5 @@ def analyze_packets():
     print(f"Качество связи: {quality}")
 
 
-# Запуск программы
 if __name__ == "__main__":
     analyze_packets()

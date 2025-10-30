@@ -1,7 +1,5 @@
 import random
 import time
-
-
 def multiplication_trainer():
     while True:
         try:
